@@ -16,11 +16,12 @@ pipeline {
                 echo "End of Stage Build..."
             }
         }
-        stage{
-          script{
-            input "Continue?"
-            ...enter code here
-            ...
+        stage ('Deploy To Prod'){
+          input{
+             message "Do you want to proceed for production deployment?"
+          }
+          steps {
+                sh 'echo "Deploy into Prod"'
           }
         }
         stage('Deploy to prod') {
