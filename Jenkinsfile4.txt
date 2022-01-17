@@ -16,8 +16,12 @@ pipeline {
                 echo "End of Stage Build..."
             }
         }
-        stage('Deploy approval'){
-            input 'Deploy to prod?'
+        stage{
+          script{
+            input "Continue?"
+            ...enter code here
+            ...
+          }
         }
         stage('Deploy to prod') {
             steps {
