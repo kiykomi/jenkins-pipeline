@@ -1,3 +1,4 @@
+#!groovy
 pipeline {
     agent any
     environment {
@@ -9,7 +10,7 @@ pipeline {
         stage('1-Build') {
             steps {
                 sh 'ip a'
-                
+
                 echo "Start of Stage Build..."
                 echo "Building......."
                 echo "End of Stage Build..."
@@ -27,6 +28,6 @@ pipeline {
                 echo "End of Stage Build..."
             }
         }
-        
-    }   
+
+    }
 }
