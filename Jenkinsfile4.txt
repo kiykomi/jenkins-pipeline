@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('1-Build') {
             steps {
-                ssh -i ~/.ssh/id_rsa kiykomi@4.4.4.19 'ip  a'
+                ssh -i /home/kiykomi/.ssh/id_rsa kiykomi@4.4.4.19 'ip  a'
                 echo "Start of Stage Build..."
                 echo "Building......."
                 echo "End of Stage Build..."
