@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy approval'){
             input "Deploy to prod?"
         }
-        stage('2-Test') {
+        stage('Deploy to prod') {
             steps {
                 echo "Start of Stage Test..."
                 echo "Testing......."
