@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    node {
+    node1 {
       stage('build'){
           echo "building"
       }
@@ -8,7 +8,7 @@ pipeline {
       stage('Deploy approval'){
           input "Deploy to prod?"
       }
-    node {
+    node1 {
      stage('deploy to prod'){
         echo "deploying"
      }
